@@ -164,7 +164,7 @@
         <h1>📖 درس مادة التربية الإسلامية - تطبيق هادف</h1>
         <p style="color: #555; font-weight: bold;">📺 دروس إضافية عبر يوتيوب:</p>
 
-        <a href="https://youtu.be/jI4xZXre5QU?si=UWkhO7IhqdLowJFd" target="_blank" class="youtube-btn">
+        <a href="https://youtu.be/jI4xZXre5QU?si=UWkhO7IhqdLowJFd" target="_blank" class="youtube-btn" onclick="playSound()">
             🎬 من ربك وما دينك - تعليم العقيدة الإسلامية للأطفال
         </a>
 
@@ -174,7 +174,7 @@
         <!-- الدرس الأول -->
         <div class="video-box">
             <h3>الدرس الأول</h3>
-            <div class="video-cover" style="background-color: #e8f5e9;" onclick="startVideo(this)">
+            <div class="video-cover" style="background-color: #e8f5e9;" onclick="playSound(); startVideo(this)">
                 <button class="play-custom-btn">▶ هيا نبدأ الدرس الأول</button>
             </div>
             <video controls preload="metadata" playsinline>
@@ -186,7 +186,7 @@
         <!-- الدرس الثاني -->
         <div class="video-box">
             <h3>الدرس الثاني</h3>
-            <div class="video-cover" style="background-color: #e1f5fe;" onclick="startVideo(this)">
+            <div class="video-cover" style="background-color: #e1f5fe;" onclick="playSound(); startVideo(this)">
                 <button class="play-custom-btn" style="background: #0277bd;">▶ هيا نبدأ الدرس الثاني</button>
             </div>
             <video controls preload="metadata" playsinline>
@@ -198,7 +198,7 @@
         <!-- الدرس الثالث -->
         <div class="video-box">
             <h3>الدرس الثالث</h3>
-            <div class="video-cover" style="background-color: #fff9c4;" onclick="startVideo(this)">
+            <div class="video-cover" style="background-color: #fff9c4;" onclick="playSound(); startVideo(this)">
                 <button class="play-custom-btn" style="background: #f57f17;">▶ هيا نبدأ الدرس الثالث</button>
             </div>
             <video controls preload="metadata" playsinline>
@@ -210,7 +210,7 @@
         <!-- الدرس الرابع -->
         <div class="video-box">
             <h3>الدرس الرابع</h3>
-            <div class="video-cover" style="background-color: #ffebee;" onclick="startVideo(this)">
+            <div class="video-cover" style="background-color: #ffebee;" onclick="playSound(); startVideo(this)">
                 <button class="play-custom-btn" style="background: #c62828;">▶ هيا نبدأ الدرس الرابع</button>
             </div>
             <video controls preload="metadata" playsinline>
@@ -222,7 +222,7 @@
         <!-- الدرس الخامس -->
         <div class="video-box">
             <h3>الدرس الخامس</h3>
-            <div class="video-cover" style="background-color: #f3e5f5;" onclick="startVideo(this)">
+            <div class="video-cover" style="background-color: #f3e5f5;" onclick="playSound(); startVideo(this)">
                 <button class="play-custom-btn" style="background: #7b1fa2;">▶ هيا نبدأ الدرس الخامس</button>
             </div>
             <video controls preload="metadata" playsinline>
@@ -234,7 +234,7 @@
         <!-- الدرس السادس -->
         <div class="video-box">
             <h3>الدرس السادس</h3>
-            <div class="video-cover" style="background-color: #e0f2f1;" onclick="startVideo(this)">
+            <div class="video-cover" style="background-color: #e0f2f1;" onclick="playSound(); startVideo(this)">
                 <button class="play-custom-btn" style="background: #00695c;">▶ هيا نبدأ الدرس السادس</button>
             </div>
             <video controls preload="metadata" playsinline>
@@ -246,7 +246,7 @@
         <!-- الدرس السابع -->
         <div class="video-box">
             <h3>الدرس السابع</h3>
-            <div class="video-cover" style="background-color: #fff3e0;" onclick="startVideo(this)">
+            <div class="video-cover" style="background-color: #fff3e0;" onclick="playSound(); startVideo(this)">
                 <button class="play-custom-btn" style="background: #ef6c00;">▶ هيا نبدأ الدرس السابع</button>
             </div>
             <video controls preload="metadata" playsinline>
@@ -263,24 +263,36 @@
                 يوجد الكثير من الفيديوهات التي تعلّم طفلك آداب الإسلام وكيفية الوضوء والصلاة، لمزيد من الفيديوهات يرجى التواصل على الواتس
             </p>
             
-            <a href="https://wa.me/972567803632" target="_blank" class="whatsapp-contact-btn">
+            <a href="https://wa.me/972567803632" target="_blank" class="whatsapp-contact-btn" onclick="playSound()">
                 <i class="fab fa-whatsapp"></i> تواصل معنا عبر الواتساب
             </a>
         </div>
 
         <br>
-        <a href="index.html" class="back-btn">🏠 العودة إلى صفحة الترحيب</a>
+        <a href="index.html" class="back-btn" onclick="playSound()">🏠 العودة إلى صفحة الترحيب</a>
     </div>
 
     <footer>
         <p>إعداد المعلمة: هديل فضل أبودية - 2026-2027 © جميع الحقوق محفوظة</p>
         <div class="social-icons">
-            <a href="https://wa.me/972567803632" target="_blank" class="whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.instagram.com/hadeel__fadel?igsh=d253NWtva2twdDQ4" target="_blank" class="instagram" title="انستجرام"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/972567803632" target="_blank" class="whatsapp" title="واتساب" onclick="playSound()"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/hadeel__fadel?igsh=d253NWtva2twdDQ4" target="_blank" class="instagram" title="انستجرام" onclick="playSound()"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 
+    <!-- عنصر الصوت العام للنغمة التفاعلية -->
+    <audio id="globalSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"></audio>
+
     <script>
+        // دالة تشغيل الصوت التفاعلي
+        function playSound() {
+            const sound = document.getElementById('globalSound');
+            if (sound) {
+                sound.currentTime = 0;
+                sound.play().catch(e => console.log('Audio blocked or error:', e));
+            }
+        }
+
         // دالة لإخفاء الغلاف وإظهار وتشغيل الفيديو فور ضغط الطفل عليه
         function startVideo(coverElement) {
             const videoBox = coverElement.parentElement;
