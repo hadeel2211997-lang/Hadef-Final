@@ -179,7 +179,7 @@
         <h1>📐 درس مادة الرياضيات - تطبيق هادف</h1>
         <p style="color: #555; font-weight: bold;">📺 دروس إضافية عبر يوتيوب:</p>
 
-        <a href="https://youtu.be/uO86DY5Z7jU?si=xl0Ar7bKBtVShGaZ" target="_blank" class="youtube-btn">
+        <a href="https://youtu.be/uO86DY5Z7jU?si=xl0Ar7bKBtVShGaZ" target="_blank" class="youtube-btn" onclick="playSound()">
             🎬 هيا بنا نتعلم معا يا أبطال
         </a>
 
@@ -189,7 +189,7 @@
         <!-- الدرس الأول -->
         <div class="video-box">
             <h3>الدرس الأول</h3>
-            <div class="video-cover" style="background-color: #e3f2fd;" onclick="startVideo(this)">
+            <div class="video-cover" style="background-color: #e3f2fd;" onclick="playSound(); startVideo(this)">
                 <button class="play-custom-btn">▶ هيا نبدأ الدرس الأول</button>
             </div>
             <video controls preload="metadata" playsinline>
@@ -201,7 +201,7 @@
         <!-- الدرس الثاني -->
         <div class="video-box">
             <h3>الدرس الثاني</h3>
-            <div class="video-cover" style="background-color: #e8f5e9;" onclick="startVideo(this)">
+            <div class="video-cover" style="background-color: #e8f5e9;" onclick="playSound(); startVideo(this)">
                 <button class="play-custom-btn" style="background: #2e7d32;">▶ هيا نبدأ الدرس الثاني</button>
             </div>
             <video controls preload="metadata" playsinline>
@@ -213,7 +213,7 @@
         <!-- الدرس الثالث -->
         <div class="video-box">
             <h3>الدرس الثالث</h3>
-            <div class="video-cover" style="background-color: #fff9c4;" onclick="startVideo(this)">
+            <div class="video-cover" style="background-color: #fff9c4;" onclick="playSound(); startVideo(this)">
                 <button class="play-custom-btn" style="background: #f57f17;">▶ هيا نبدأ الدرس الثالث</button>
             </div>
             <video controls preload="metadata" playsinline>
@@ -225,7 +225,7 @@
         <!-- الدرس الرابع -->
         <div class="video-box">
             <h3>الدرس الرابع</h3>
-            <div class="video-cover" style="background-color: #ffebee;" onclick="startVideo(this)">
+            <div class="video-cover" style="background-color: #ffebee;" onclick="playSound(); startVideo(this)">
                 <button class="play-custom-btn" style="background: #c62828;">▶ هيا نبدأ الدرس الرابع</button>
             </div>
             <video controls preload="metadata" playsinline>
@@ -238,7 +238,7 @@
 
         <div>
             <h3>أوراق العمل</h3>
-            <a href="math_worksheets/math_sheet.pdf" download class="download-btn">
+            <a href="math_worksheets/math_sheet.pdf" download class="download-btn" onclick="playSound()">
                 📄 تحميل ورقة عمل الرياضيات المجانية (PDF)
             </a>
             
@@ -246,24 +246,36 @@
                 يرجى التواصل معنا على الواتس للحصول على باقي أوراق العمل والمزيد من الملخصات!
             </p>
             
-            <a href="https://wa.me/972567803632" target="_blank" class="whatsapp-contact-btn">
+            <a href="https://wa.me/972567803632" target="_blank" class="whatsapp-contact-btn" onclick="playSound()">
                 <i class="fab fa-whatsapp"></i> تواصل معنا عبر الواتساب
             </a>
         </div>
 
         <br>
-        <a href="index.html" class="back-btn">🏠 العودة إلى صفحة الترحيب</a>
+        <a href="index.html" class="back-btn" onclick="playSound()">🏠 العودة إلى صفحة الترحيب</a>
     </div>
 
     <footer>
         <p>إعداد المعلمة: هديل فضل أبودية - 2026-2027 © جميع الحقوق محفوظة</p>
         <div class="social-icons">
-            <a href="https://wa.me/972567803632" target="_blank" class="whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.instagram.com/hadeel__fadel?igsh=d253NWtva2twdDQ4" target="_blank" class="instagram" title="انستجرام"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/972567803632" target="_blank" class="whatsapp" title="واتساب" onclick="playSound()"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/hadeel__fadel?igsh=d253NWtva2twdDQ4" target="_blank" class="instagram" title="انستجرام" onclick="playSound()"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 
+    <!-- عنصر الصوت العام للنغمة التفاعلية للأطفال -->
+    <audio id="globalSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"></audio>
+
     <script>
+        // دالة تشغيل الصوت التفاعلي
+        function playSound() {
+            const sound = document.getElementById('globalSound');
+            if (sound) {
+                sound.currentTime = 0;
+                sound.play().catch(e => console.log('Audio blocked or error:', e));
+            }
+        }
+
         // دالة لإخفاء الغلاف وإظهار وتشغيل الفيديو فور ضغط الطفل عليه
         function startVideo(coverElement) {
             const videoBox = coverElement.parentElement;
